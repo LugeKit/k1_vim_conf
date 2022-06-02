@@ -10,8 +10,8 @@ set smartcase
 mapclear
 imapclear
 
-map <C-i> <C-u>
-map <C-k> <C-d>
+map <C-k> <C-u>
+map <C-j> <C-d>
 map - 0
 map = $
 
