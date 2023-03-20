@@ -1,8 +1,13 @@
-" line
+syntax on
+
+" line number
 set nu
 set rnu
 
-" search config
+" tab settings
+set ts=4
+set sw=4
+
+" case settings, ignore case only all small case
 set ignorecase
-" not ignore case when there is a higher case
 set smartcase
