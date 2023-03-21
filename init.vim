@@ -4,7 +4,6 @@ Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'preservim/tagbar'
 Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
@@ -27,7 +26,9 @@ source ~/.vim/coc.vim
 
 " status line
 let g:airline#extensions#tabline#enabled = 1
-
+let airline#extensions#coc#enabled = 1
+let airline#extensions#coc#error_symbol = 'E:'
+let airline#extensions#coc#warning_symbol = 'W:'
 
 " line number
 set nu

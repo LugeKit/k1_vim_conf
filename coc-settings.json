@@ -1,4 +1,15 @@
 {
-  "snippets.ultisnips.pythonPrompt": false,
-  "suggest.noselect": true
+	"snippets.ultisnips.pythonPrompt": false,
+	"suggest.noselect": true,
+	"languageserver": {
+		"golang": {
+			"command": "gopls",
+			"rootPatterns": [
+				"go.mod"
+			],
+			"filetypes": [
+				"go"
+			]
+		}
+	}
 }
