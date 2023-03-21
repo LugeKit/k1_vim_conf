@@ -29,9 +29,9 @@ let g:airline#extensions#tabline#enabled = 1
 
 " floaterm
 let g:floaterm_keymap_toggle = '<F1>'
-let g:floaterm_keymap_new = '<leader><F2>'
-let g:floaterm_keymap_next = '<leader><F3>'
-let g:floaterm_keymap_prev = '<leader><F4>'
+let g:floaterm_keymap_new = '<F5>'
+let g:floaterm_keymap_next = '<F6>'
+let g:floaterm_keymap_prev = '<F7>'
 
 " line number
 set nu
