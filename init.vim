@@ -3,6 +3,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'preservim/nerdtree'
 Plug 'preservim/tagbar'
+Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 color dracula
