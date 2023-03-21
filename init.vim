@@ -2,6 +2,7 @@ call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'preservim/nerdtree'
+Plug 'preservim/tagbar'
 call plug#end()
 
 color dracula
