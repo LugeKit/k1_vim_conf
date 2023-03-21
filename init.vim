@@ -7,6 +7,7 @@ Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'voldikss/vim-floaterm'
 call plug#end()
 
 color dracula
@@ -23,6 +24,12 @@ let g:markdown_fenced_languages = ['vim', 'help']
 
 " status line
 let g:airline#extensions#tabline#enabled = 1
+
+" floaterm
+let g:floaterm_keymap_toggle = '<F1>'
+let g:floaterm_keymap_new = '<leader><F2>'
+let g:floaterm_keymap_next = '<leader><F3>'
+let g:floaterm_keymap_prev = '<leader><F4>'
 
 " line number
 set nu
@@ -51,8 +58,7 @@ noremap <leader>t gt
 noremap <leader>T gT
 
 " user defined command, must begin with upper case
-command T below terminal
-command TN tabnew
+command T tabnew
 
 " NERDTree
 nnoremap <leader>n :NERDTreeToggle<CR>
