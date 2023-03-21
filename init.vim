@@ -12,8 +12,6 @@ set sw=4
 set ignorecase
 set smartcase
 
-set rulerformat=%10(%l/%L\ %p%%%)
-
 " set leader key
 let mapleader = ' '
 
