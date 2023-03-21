@@ -7,8 +7,6 @@ call plug#end()
 
 color dracula
 set termguicolors
-set cursorcolumn
-set cursorline
 let loaded_netrwPlugin = 1 " disable netrw
 
 " coc.nvim import
