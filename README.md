@@ -1,3 +1,5 @@
-# A single vim config for vim9.0
-- require nodejs
-- require universal/tags
+# A simple vim config for vim 8.2
+- require `nodejs`
+- require `universal/tags`
+
+Place it in ~/.vim/.
