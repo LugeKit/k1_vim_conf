@@ -14,7 +14,7 @@ noremap <leader>T gT
 
 " user defined command, must begin with upper case
 command T tabnew
-command B buffer
+command! -nargs=1 B :buffer <args>
 command BS buffers
 
 " NERDTree
