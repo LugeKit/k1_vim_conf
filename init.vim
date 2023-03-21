@@ -2,7 +2,11 @@ call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
-syntax on
+" coc.nvim import
+source ~/.vim/coc.vim
+let g:coc_global_extensions = []
+let g:coc_global_extensions += ['coc-snippets']
+let g:coc_global_extensions += ['coc-json', 'coc-go', 'coc-vimlsp', 'coc-yaml', 'coc-protobuf', 'coc-sh']
 
 " line number
 set nu
@@ -33,6 +37,3 @@ noremap <leader>T gT
 " user defined command, must begin with upper case
 command T below terminal
 command TN tabnew
-
-" coc.nvim import
-source ~/.vim/coc.vim
