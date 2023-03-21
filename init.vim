@@ -5,6 +5,8 @@ Plug 'preservim/nerdtree'
 Plug 'preservim/tagbar'
 Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 color dracula
@@ -17,6 +19,9 @@ let g:coc_global_extensions = []
 let g:coc_global_extensions += ['coc-snippets']
 let g:coc_global_extensions += ['coc-json', 'coc-go', 'coc-vimlsp', 'coc-yaml', 'coc-protobuf', 'coc-sh']
 let g:markdown_fenced_languages = ['vim', 'help']
+
+" status line
+let g:airline#extensions#tabline#enabled = 1
 
 " line number
 set nu
