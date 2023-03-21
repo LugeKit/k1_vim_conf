@@ -23,6 +23,8 @@ set smartcase
 " set leader key
 let mapleader = ' '
 
+set termguicolors
+
 " switch between tabs
 noremap <leader>1 1gt
 noremap <leader>2 2gt
