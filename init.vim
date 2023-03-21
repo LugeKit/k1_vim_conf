@@ -1,6 +1,14 @@
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'dracula/vim', {'as': 'dracula'}
+Plug 'preservim/nerdtree'
 call plug#end()
+
+color dracula
+set termguicolors
+set cursorcolumn
+set cursorline
+let loaded_netrwPlugin = 1 " disable netrw
 
 " coc.nvim import
 source ~/.vim/coc.vim
@@ -24,8 +32,6 @@ set smartcase
 " set leader key
 let mapleader = ' '
 
-set termguicolors
-
 " switch between tabs
 noremap <leader>1 1gt
 noremap <leader>2 2gt
@@ -40,3 +46,7 @@ noremap <leader>T gT
 " user defined command, must begin with upper case
 command T below terminal
 command TN tabnew
+
+" NERDTree
+nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>l :NERDTreeFind<CR>
