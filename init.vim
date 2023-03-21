@@ -33,3 +33,6 @@ noremap <leader>T gT
 " user defined command, must begin with upper case
 command T below terminal
 command TN tabnew
+
+" coc.nvim import
+source ~/.vim/coc.vim
