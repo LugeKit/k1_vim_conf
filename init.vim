@@ -14,6 +14,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'voldikss/vim-floaterm'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
+Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries' }
 call plug#end()
 
 color molokai
@@ -40,6 +41,25 @@ let airline#extensions#coc#warning_symbol = 'W:'
 
 " fzf preview
 let g:fzf_preview_lines_command = 'bat --color=always --number'
+
+" vim-go disable some settings which is conflict to coc-go
+let g:go_def_mapping_enabled = 0
+let g:go_imports_autosave = 0
+let g:go_fmt_autosave = 0
+let g:go_updatetime = 200
+let g:go_auto_sameids = 0
+let g:go_auto_type_info = 1
+let g:go_code_completion_enabled = 0
+let g:go_gopls_enabled = 1
+" highlights
+let g:go_highlight_extra_types = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_variable_declarations = 1
+let g:go_highlight_variable_assignments = 1
+
 
 " line number
 set nu
