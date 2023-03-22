@@ -17,10 +17,11 @@ Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries' }
 call plug#end()
 
-color molokai
 set termguicolors
 let loaded_netrwPlugin = 1 " disable netrw
 set mouse=a
+let g:dracula_italic = 0
+colorscheme dracula
 
 " coc.nvim import
 let g:coc_global_extensions = []
