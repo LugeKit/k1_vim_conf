@@ -2,15 +2,17 @@
 let mapleader = ' '
 
 " switch between tabs
-noremap <leader>1 1gt
-noremap <leader>2 2gt
-noremap <leader>3 3gt
-noremap <leader>4 4gt
-noremap <leader>5 5gt
-noremap <leader>6 6gt
-noremap <leader>7 7gt
-noremap <leader>t gt
-noremap <leader>T gT
+nnoremap <leader>1 1gt
+nnoremap <leader>2 2gt
+nnoremap <leader>3 3gt
+nnoremap <leader>4 4gt
+nnoremap <leader>5 5gt
+nnoremap <leader>6 6gt
+nnoremap <leader>7 7gt
+nnoremap <leader>t gt
+nnoremap <leader>T gT
+
+nnoremap <leader><BS> :bd<CR>
 
 " user defined command, must begin with upper case
 command T tabnew
