@@ -26,7 +26,7 @@ set mouse=a
 let g:coc_global_extensions = []
 let g:coc_global_extensions += ['coc-snippets']
 let g:coc_global_extensions += ['coc-json', 'coc-go', 'coc-vimlsp', 'coc-yaml', 'coc-protobuf', 'coc-sh']
-let g:coc_global_extensions += ['coc-docker', 'coc-tsserver', 'coc-html', 'coc-pyright']
+let g:coc_global_extensions += ['coc-docker', 'coc-tsserver', 'coc-html', 'coc-pyright', 'coc-highlight']
 let g:markdown_fenced_languages = ['vim', 'help']
 source ~/.vim/coc.vim
 
@@ -51,7 +51,7 @@ let g:go_auto_sameids = 0
 let g:go_auto_type_info = 1
 let g:go_code_completion_enabled = 0
 let g:go_gopls_enabled = 1
-  let g:go_doc_keywordprg_enabled = 0
+let g:go_doc_keywordprg_enabled = 0
 " highlights
 let g:go_highlight_extra_types = 1
 let g:go_highlight_functions = 1
