@@ -1,6 +1,6 @@
 {
 	"snippets.ultisnips.pythonPrompt": false,
-	"suggest.noselect": true,
+	"suggest.noselect": false,
 	"languageserver": {
 		"golang": {
 			"command": "gopls",
