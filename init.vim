@@ -24,7 +24,7 @@ set mouse=a
 let g:coc_global_extensions = []
 let g:coc_global_extensions += ['coc-snippets']
 let g:coc_global_extensions += ['coc-json', 'coc-go', 'coc-vimlsp', 'coc-yaml', 'coc-protobuf', 'coc-sh']
-let g:coc_global_extensions += ['coc-docker']
+let g:coc_global_extensions += ['coc-docker', 'coc-tsserver']
 let g:markdown_fenced_languages = ['vim', 'help']
 source ~/.vim/coc.vim
 
