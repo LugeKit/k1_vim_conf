@@ -29,7 +29,7 @@ let g:floaterm_keymap_next = '<F6>'
 let g:floaterm_keymap_prev = '<F7>'
 
 "fzf
-let g:fzf_action = { 'enter': 'tab split' }
+let g:fzf_action = { 'enter': 'tab split', 'ctrl-v': 'vsplit', 'ctrl-x': 'split' }
 
 " search
 nnoremap <C-p> :Files<CR>
