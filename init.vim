@@ -15,7 +15,7 @@ Plug 'voldikss/vim-floaterm'
 Plug 'tpope/vim-fugitive'
 call plug#end()
 
-color dracula
+color molokai
 set termguicolors
 let loaded_netrwPlugin = 1 " disable netrw
 set mouse=a
