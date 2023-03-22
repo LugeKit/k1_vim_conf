@@ -1,3 +1,5 @@
+set nocompatible
+
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dracula/vim', {'as': 'dracula'}
@@ -16,6 +18,7 @@ call plug#end()
 color dracula
 set termguicolors
 let loaded_netrwPlugin = 1 " disable netrw
+set mouse=a
 
 " coc.nvim import
 let g:coc_global_extensions = []

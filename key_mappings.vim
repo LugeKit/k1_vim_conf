@@ -28,8 +28,7 @@ let g:floaterm_keymap_next = '<F6>'
 let g:floaterm_keymap_prev = '<F7>'
 
 " search
-nnoremap <C-p> :Rg<CR>
-nnoremap <C-P> :Files<CR>
+nnoremap <C-p> :Files<CR>
 nnoremap <silent><nowait> <leader>p  :<C-u>CocList -I symbols<cr>
 
 " coc ---------------------------------------------------------------------------
