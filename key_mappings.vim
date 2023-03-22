@@ -28,12 +28,17 @@ let g:floaterm_keymap_new = '<F5>'
 let g:floaterm_keymap_next = '<F6>'
 let g:floaterm_keymap_prev = '<F7>'
 
-"fzf
+" fzf
 let g:fzf_action = { 'enter': 'tab split', 'ctrl-v': 'vsplit', 'ctrl-x': 'split' }
 
 " search
 nnoremap <C-p> :Files<CR>
 nnoremap <silent><nowait> <leader>p  :<C-u>CocList -I symbols<cr>
+
+" gitgutter
+nnoremap <leader>ht :pclose<CR>
+nnoremap ]h <Plug>(GitGutterNextHunk)
+nnoremap [h <Plug>(GitGutterPrevHunk)
 
 " coc ---------------------------------------------------------------------------
 " Use <c-space> to trigger completion
