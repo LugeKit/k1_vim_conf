@@ -34,6 +34,9 @@ let airline#extensions#coc#enabled = 1
 let airline#extensions#coc#error_symbol = 'E:'
 let airline#extensions#coc#warning_symbol = 'W:'
 
+" fzf preview
+let g:fzf_preview_lines_command = 'bat --color=always --number'
+
 " line number
 set nu
 set rnu
