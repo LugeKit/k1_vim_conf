@@ -2,6 +2,7 @@ call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'preservim/nerdtree'
+Plug 'preservim/tagbar'
 Plug 'ryanoasis/vim-devicons'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
