@@ -27,9 +27,10 @@ let g:floaterm_keymap_new = '<F5>'
 let g:floaterm_keymap_next = '<F6>'
 let g:floaterm_keymap_prev = '<F7>'
 
-" fzf-vim
+" search
 nnoremap <C-p> :Rg<CR>
 nnoremap <C-P> :Files<CR>
+nnoremap <silent><nowait> <leader>p  :<C-u>CocList -I symbols<cr>
 
 " coc ---------------------------------------------------------------------------
 " Use <c-space> to trigger completion
@@ -52,6 +53,7 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nmap <silent> <C-]> <Plug>(coc-definition)
+nnoremap <silent> K :call ShowDocumentation()<CR>
 
 " Symbol renaming
 nmap <leader>rn <Plug>(coc-rename)
@@ -79,7 +81,6 @@ nmap <silent> <C-s> <Plug>(coc-range-select)
 xmap <silent> <C-s> <Plug>(coc-range-select)
 
 " Search workspace symbols
-nnoremap <silent><nowait> <leader>s  :<C-u>CocList -I symbols<cr>
 
 " Use tab for trigger completion with characters ahead and navigate
 " NOTE: There's always complete item selected by default, you may want to enable
@@ -103,9 +104,6 @@ function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-
-" Use K to show documentation in preview window
-nnoremap <silent> K :call ShowDocumentation()<CR>
 
 function! ShowDocumentation()
   if CocAction('hasProvider', 'hover')
