@@ -14,18 +14,20 @@ noremap <leader>T gT
 
 " user defined command, must begin with upper case
 command T tabnew
-command! -nargs=1 B :buffer <args>
-command BS buffers
 
 " NERDTree
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>l :NERDTreeFind<CR>
+let NERDTreeCustomOpenArgs={'file': {'reuse': 'all', 'where': 't'}}
 
 " floaterm
 let g:floaterm_keymap_toggle = '<F1>'
 let g:floaterm_keymap_new = '<F5>'
 let g:floaterm_keymap_next = '<F6>'
 let g:floaterm_keymap_prev = '<F7>'
+
+"fzf
+let g:fzf_action = { 'enter': 'tab split' }
 
 " search
 nnoremap <C-p> :Files<CR>

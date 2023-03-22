@@ -28,6 +28,9 @@ let g:coc_global_extensions += ['coc-docker', 'coc-tsserver', 'coc-html', 'coc-p
 let g:markdown_fenced_languages = ['vim', 'help']
 source ~/.vim/coc.vim
 
+" NERDTree options
+let NERDTreeCustomOpenArgs={'file': {'reuse': 'all', 'where': 't'}}
+
 " status line
 let g:airline#extensions#tabline#enabled = 1
 let airline#extensions#coc#enabled = 1
