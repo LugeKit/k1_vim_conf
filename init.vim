@@ -18,17 +18,17 @@ Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries' }
 Plug 'joshdick/onedark.vim', {'as': 'onedark'}
 call plug#end()
 
-set wildmenu
+set wildmenu " TAB completion in command
 set termguicolors
 set mouse=a
 set autoread " auto reload which git checkout
-set clipboard=unnamed
+set clipboard=unnamed " system level clipboard in vim
 
 let loaded_netrwPlugin = 1 " disable netrw
 " let g:dracula_italic = 0
 " colorscheme dracula
-let g:airline_theme='onedark'
 colorscheme onedark
+let g:airline_theme='onedark'
 
 " coc.nvim import
 let g:coc_global_extensions = []
