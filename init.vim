@@ -81,5 +81,6 @@ set ts=4
 set sw=4
 
 " case settings, ignore case only all lower case
+set ignorecase
 set smartcase
 source ~/.vim/key_mappings.vim
