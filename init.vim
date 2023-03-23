@@ -1,5 +1,3 @@
-set nocompatible " not compatible with vi, must be set at very start
-
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dracula/vim', {'as': 'dracula'}
@@ -18,18 +16,10 @@ Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries' }
 Plug 'joshdick/onedark.vim', {'as': 'onedark'}
 call plug#end()
 
-set wildmenu " TAB completion in command
-set termguicolors
-set mouse=a
-set autoread " auto reload which git checkout
-set clipboard=unnamed " system level clipboard in vim
-set noswapfile
-
-let loaded_netrwPlugin = 1 " disable netrw
-" let g:dracula_italic = 0
-" colorscheme dracula
 colorscheme onedark
 let g:airline_theme='onedark'
+source ~/.vim/key_mappings_plugins.vim
+source ~/.vim/raw.vim
 
 " coc.nvim import
 let g:coc_global_extensions = []
@@ -72,16 +62,3 @@ let g:go_highlight_variable_assignments = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_format_strings = 1
 
-
-" line number
-set nu
-set rnu
-
-" tab settings
-set ts=4
-set sw=4
-
-" case settings, ignore case only all lower case
-set ignorecase
-set smartcase
-source ~/.vim/key_mappings.vim

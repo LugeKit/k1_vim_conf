@@ -1,22 +1,3 @@
-" set leader key
-let mapleader = ' '
-
-" switch between tabs
-nnoremap <leader>1 1gt
-nnoremap <leader>2 2gt
-nnoremap <leader>3 3gt
-nnoremap <leader>4 4gt
-nnoremap <leader>5 5gt
-nnoremap <leader>6 6gt
-nnoremap <leader>7 7gt
-nnoremap <leader>t gt
-nnoremap <leader>T gT
-
-nnoremap <leader><BS> :bd<CR>
-
-" user defined command, must begin with upper case
-command T tabnew
-
 " NERDTree
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>l :NERDTreeFind<CR>
