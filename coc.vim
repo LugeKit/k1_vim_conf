@@ -15,3 +15,4 @@ set signcolumn=yes
 
 autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
 autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.format')
+autocmd CursorHold * silent call CocActionAsync('highlight')
