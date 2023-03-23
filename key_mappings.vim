@@ -40,6 +40,11 @@ nnoremap <leader>ht :pclose<CR>
 nnoremap ]h <Plug>(GitGutterNextHunk)
 nnoremap [h <Plug>(GitGutterPrevHunk)
 
+" golang
+command GT :GoTest -gcflags=all=-l<CR>
+command GTF :GoTestFile -gcflags=all=-l<CR>
+command GTFC :GoTestFunc -gcflags=all=-l<CR>
+
 " coc ---------------------------------------------------------------------------
 " Use <c-space> to trigger completion
 if has('nvim')
