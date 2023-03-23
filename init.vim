@@ -1,5 +1,4 @@
-set nocompatible
-set wildmenu
+set nocompatible " not compatible with vi, must be set at very start
 
 call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -18,9 +17,12 @@ Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries' }
 call plug#end()
 
+set wildmenu
 set termguicolors
-let loaded_netrwPlugin = 1 " disable netrw
 set mouse=a
+set autoread " auto reload which git checkout
+
+let loaded_netrwPlugin = 1 " disable netrw
 let g:dracula_italic = 0
 colorscheme dracula
 
