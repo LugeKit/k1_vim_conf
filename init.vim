@@ -15,6 +15,7 @@ Plug 'voldikss/vim-floaterm'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go', {'do': ':GoUpdateBinaries' }
+Plug 'joshdick/onedark.vim', {'as': 'onedark'}
 call plug#end()
 
 set wildmenu
@@ -24,8 +25,10 @@ set autoread " auto reload which git checkout
 set clipboard=unnamed
 
 let loaded_netrwPlugin = 1 " disable netrw
-let g:dracula_italic = 0
-colorscheme dracula
+" let g:dracula_italic = 0
+" colorscheme dracula
+let g:airline_theme='onedark'
+colorscheme onedark
 
 " coc.nvim import
 let g:coc_global_extensions = []
