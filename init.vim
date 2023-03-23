@@ -23,6 +23,7 @@ set termguicolors
 set mouse=a
 set autoread " auto reload which git checkout
 set clipboard=unnamed " system level clipboard in vim
+set noswapfile
 
 let loaded_netrwPlugin = 1 " disable netrw
 " let g:dracula_italic = 0
