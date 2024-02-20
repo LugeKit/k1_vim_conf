@@ -1,11 +1,12 @@
 set hlsearch
 set incsearch
+set nu
 set rnu
 set ignorecase
 set smartcase
-set timeoutlen=100
+set timeoutlen=1000
 
-let mapleader = ' '
+let mapleader = " "
 noremap <C-h> ^
 noremap <C-l> $
 noremap <C-j> 10j
@@ -17,25 +18,22 @@ noremap <S-Tab> ?\v
 
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
-inoremap <C-j> <Up>
-inoremap <C-k> <Down>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
 
 nnoremap <silent> <ESC> :noh<CR>
 nnoremap <leader>s :%s/\v
 nnoremap x "_x
 nnoremap c "_c
 nnoremap C "_C
-nnoremap d "_d
-nnoremap D "_D
-nnoremap <leader>d d
-nnoremap <leader>D D
+nnoremap <leader>d "_d
+nnoremap <leader>D "_D
+nnoremap <silent> <leader>ta :tabo<CR>
 
 xnoremap <leader>s :s/\v
 xnoremap y y`>
 xnoremap x "_x
 xnoremap c "_c
 xnoremap C "_C
-xnoremap d "_d
-xnoremap D "_D
-xnoremap <leader>d d
-xnoremap <leader>D D
+xnoremap <leader>d "_d
+xnoremap <leader>D "_D
