@@ -79,7 +79,7 @@ nnoremap S[ mpF[xf]x`ph
 nnoremap S< mpF<xf>x`ph
 
 if exists("&ide")
-	call OperatorForNextTargetInIDE(["c", "d"], ["(", "<", "[", '"', "'"])
+	call OperatorForNextTargetInIDE(["c", "d"], ["(", "<", "[", '"', "'", "{"])
 else
 	" Currently this part in ide has bugs"
 	onoremap in( :<C-U>normal! f(vi(<CR>
@@ -87,6 +87,7 @@ else
 	onoremap in[ :<C-U>normal! f[vi[<CR>
 	onoremap in" :<C-U>normal! f"vi"<CR>
 	onoremap in' :<C-U>normal! f'vi'<CR>
+	onoremap in{ :<C-U>normal! f{vi{<CR>
 endif
 
 " }}}
