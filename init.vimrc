@@ -1,3 +1,5 @@
+" Vim settings {{{
+mapclear
 set hlsearch
 set incsearch
 set nu
@@ -12,8 +14,10 @@ filetype on
 filetype plugin on
 filetype indent on
 syntax enable
-
 let mapleader = " "
+" }}}
+
+source func.vim
 
 " Key mappings {{{
 " Normal mappings
@@ -24,7 +28,7 @@ noremap <C-k> 10k
 noremap ; :
 noremap : ;
 nnoremap <silent> <leader>ta :tabo<CR>
-nnoremap <silent> <leader>// :vs $MYVIMRC<CR>
+nnoremap <silent> <leader>// :rightbelow vsplit $MYVIMRC<CR>
 inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 inoremap <C-j> <Down>
@@ -53,6 +57,8 @@ xnoremap <leader>D "_D
 " }}}
 
 " Parenthsis settings {{{
+" s to surround things
+" S to unsurround things
 xnoremap s" <ESC>`<i"<ESC>`>la"<ESC> 
 xnoremap s' <ESC>`<i'<ESC>`>la'<ESC> 
 xnoremap s( <ESC>`<i(<ESC>`>la)<ESC> 
@@ -60,11 +66,29 @@ xnoremap s{ <ESC>`<i{<ESC>`>la}<ESC>
 xnoremap s[ <ESC>`<i[<ESC>`>la]<ESC> 
 xnoremap s< <ESC>`<i<<ESC>`>la><ESC> 
 
-nnoremap ds( <ESC>F(xf)x
-nnoremap ds" <ESC>F"xf"x
-nnoremap ds' <ESC>F'xf'x
-nnoremap ds[ <ESC>F[xf]x
-nnoremap ds< <ESC>F<xf>x
+nnoremap s( mp"aciw()<ESC>h"ap`pl
+nnoremap s" mp"aciw""<ESC>h"ap`pl
+nnoremap s' mp"aciw''<ESC>h"ap`pl
+nnoremap s[ mp"aciw[]<ESC>h"ap`pl
+nnoremap s< mp"aciw<><ESC>h"ap`pl
+
+nnoremap S( mpF(xf)x`ph
+nnoremap S" mpF"xf"x`ph
+nnoremap S' mpF'xf'x`ph
+nnoremap S[ mpF[xf]x`ph
+nnoremap S< mpF<xf>x`ph
+
+if exists("&ide")
+	call OperatorForNextTargetInIDE(["c", "d"], ["(", "<", "[", '"', "'"])
+else
+	" Currently this part in ide has bugs"
+	onoremap in( :<C-U>normal! f(vi(<CR>
+	onoremap in< :<C-U>normal! f<vi<<CR>
+	onoremap in[ :<C-U>normal! f[vi[<CR>
+	onoremap in" :<C-U>normal! f"vi"<CR>
+	onoremap in' :<C-U>normal! f'vi'<CR>
+endif
+
 " }}}
 
 " Vimscript file settings {{{
@@ -106,16 +130,6 @@ if exists("&ide")
 
 	command! GT action RunClass
 	command! GB action Annotate
-else
-	" Currently this part in ide has bugs"
-	onoremap in( :<C-U>normal! f(vi(<CR>
-	onoremap in< :<C-U>normal! f<vi<<CR>
-	onoremap in[ :<C-U>normal! f[vi[<CR>
-	onoremap in" :<C-U>normal! f"vi"<CR>
-	onoremap in' :<C-U>normal! f'vi'<CR>
 endif
 " }}}
 
-function! CharAfterCursor()
-  return strcharpart(getline('.'), strchars(strpart(getline('.'), 0, col('.')-1)) + 1, 1)
-endfunction
