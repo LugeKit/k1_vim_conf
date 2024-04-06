@@ -11,6 +11,7 @@ set updatetime=250
 set timeoutlen=1000
 set ttimeoutlen=100
 set scrolloff=10
+set backspace=indent,eol,start
 filetype on
 filetype plugin on
 filetype indent on
