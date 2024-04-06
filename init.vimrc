@@ -19,6 +19,10 @@ syntax enable
 let mapleader = " "
 " }}}
 
+if !empty(glob("C:/Program Files/PowerShell/7/pwsh.exe"))
+	set shell =\"C:/Program\ Files/PowerShell/7/pwsh.exe\"
+endif
+
 source ~/.vim/func.vim
 
 " Key mappings {{{
@@ -51,6 +55,9 @@ xnoremap <leader>s :s/
 nnoremap <leader>W :call ToggleWindowMode()<CR>
 
 " }}}
+
+" Useful commands
+command! TE :below terminal
 
 " Register settings {{{
 nnoremap x "_x
@@ -140,5 +147,4 @@ if exists("&ide")
 	command! GB action Annotate
 endif
 " }}}
-
 
