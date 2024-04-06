@@ -17,7 +17,7 @@ syntax enable
 let mapleader = " "
 " }}}
 
-source func.vim
+source ~/.vim/func.vim
 
 " Key mappings {{{
 " Normal mappings
