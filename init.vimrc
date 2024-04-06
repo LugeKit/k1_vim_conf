@@ -1,4 +1,5 @@
 " Vim settings {{{
+:language en
 mapclear
 set hlsearch
 set incsearch
@@ -45,6 +46,9 @@ nnoremap <silent> <ESC> :noh<CR>
 " Substitute enhancement
 nnoremap <leader>s :%s/
 xnoremap <leader>s :s/
+
+nnoremap <leader>W :call ToggleWindowMode()<CR>
+
 " }}}
 
 " Register settings {{{
@@ -63,11 +67,11 @@ xnoremap <leader>D "_D
 " Parenthsis settings {{{
 " s to surround things
 " S to unsurround things
-xnoremap s( <ESC>`<i(<ESC>`>a)<ESC>
-xnoremap s" <ESC>`<i"<ESC>`>a"<ESC>
-xnoremap s' <ESC>`<i'<ESC>`>a'<ESC>
-xnoremap s[ <ESC>`<i[<ESC>`>a]<ESC>
-xnoremap s< <ESC>`<i<<ESC>`>a><ESC>
+xnoremap s( <ESC>`>a)<ESC>`<i(<ESC>
+xnoremap s" <ESC>`>a"<ESC>`<i"<ESC>
+xnoremap s' <ESC>`>a'<ESC>`<i'<ESC>
+xnoremap s[ <ESC>`>a]<ESC>`<i[<ESC>
+xnoremap s< <ESC>`>a><ESC>`<i<<ESC>
 
 nnoremap s( mp"aciw()<ESC>h"ap`pl
 nnoremap s" mp"aciw""<ESC>h"ap`pl
