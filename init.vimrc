@@ -25,8 +25,8 @@ source ~/.vim/func.vim
 " Normal mappings
 noremap <C-h> ^
 noremap <C-l> $
-noremap <C-j> 10j
-noremap <C-k> 10k
+noremap <C-j> 5j
+noremap <C-k> 5k
 noremap ; :
 noremap : ;
 nnoremap <silent> <leader>ta :tabo<CR>
