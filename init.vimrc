@@ -72,18 +72,17 @@ xnoremap s" <ESC>`>a"<ESC>`<i"<ESC>
 xnoremap s' <ESC>`>a'<ESC>`<i'<ESC>
 xnoremap s[ <ESC>`>a]<ESC>`<i[<ESC>
 xnoremap s< <ESC>`>a><ESC>`<i<<ESC>
-
-nnoremap s( mp"aciw()<ESC>h"ap`pl
-nnoremap s" mp"aciw""<ESC>h"ap`pl
-nnoremap s' mp"aciw''<ESC>h"ap`pl
-nnoremap s[ mp"aciw[]<ESC>h"ap`pl
-nnoremap s< mp"aciw<><ESC>h"ap`pl
-
-nnoremap S( mpF(xf)x`ph
-nnoremap S" mpF"xf"x`ph
-nnoremap S' mpF'xf'x`ph
-nnoremap S[ mpF[xf]x`ph
-nnoremap S< mpF<xf>x`ph
+nnoremap s( mpciw()<ESC>P`pl
+nnoremap s" mpciw""<ESC>P`pl
+nnoremap s' mpciw''<ESC>P`pl
+nnoremap s[ mpciw[]<ESC>P`pl
+nnoremap s< mpciw<><ESC>P`pl
+nnoremap S( mpva(<ESC>`>x`<x`ph
+nnoremap S" mpva"<ESC>`>x`<x`ph
+nnoremap S' mpva'<ESC>`>x`<x`ph
+nnoremap S[ mpva[<ESC>`>x`<x`ph
+nnoremap S< mpva<<ESC>`>x`<x`ph
+nnoremap S{ mpva{<ESC>`>x`<x`ph
 
 if exists("&ide")
 	call OperatorForNextTargetInIDE(["c", "d"], ["(", "<", "[", '"', "'", "{"])
