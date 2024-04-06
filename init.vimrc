@@ -33,6 +33,10 @@ inoremap <C-h> <Left>
 inoremap <C-l> <Right>
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
+cnoremap <C-j> <Left>
+cnoremap <C-k> <Right>
+cnoremap <C-h> <S-Left>
+cnoremap <C-l> <S-Right>
 xnoremap y y`>
 
 " ESC to switch off highlights
@@ -59,12 +63,11 @@ xnoremap <leader>D "_D
 " Parenthsis settings {{{
 " s to surround things
 " S to unsurround things
-xnoremap s" <ESC>`<i"<ESC>`>la"<ESC> 
-xnoremap s' <ESC>`<i'<ESC>`>la'<ESC> 
-xnoremap s( <ESC>`<i(<ESC>`>la)<ESC> 
-xnoremap s{ <ESC>`<i{<ESC>`>la}<ESC> 
-xnoremap s[ <ESC>`<i[<ESC>`>la]<ESC> 
-xnoremap s< <ESC>`<i<<ESC>`>la><ESC> 
+xnoremap s( <ESC>`<i(<ESC>`>a)<ESC>
+xnoremap s" <ESC>`<i"<ESC>`>a"<ESC>
+xnoremap s' <ESC>`<i'<ESC>`>a'<ESC>
+xnoremap s[ <ESC>`<i[<ESC>`>a]<ESC>
+xnoremap s< <ESC>`<i<<ESC>`>a><ESC>
 
 nnoremap s( mp"aciw()<ESC>h"ap`pl
 nnoremap s" mp"aciw""<ESC>h"ap`pl
@@ -133,4 +136,5 @@ if exists("&ide")
 	command! GB action Annotate
 endif
 " }}}
+
 
