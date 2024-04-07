@@ -116,13 +116,13 @@ augroup end
 
 " Jetbrains IDE settings {{{
 if exists("&ide")
+	set highlightedyank
+
 	set easymotion
 	let g:EasyMotion_do_mapping = 0
 	nmap f <Plug>(easymotion-bd-fl)
 	omap f <Plug>(easymotion-bd-fl)
 	vmap f <Plug>(easymotion-bd-fl)
-	nmap <leader>j <Plug>(easymotion-j)
-	nmap <leader>k <Plug>(easymotion-k)
 
 	nmap <leader>ff <Action>(SearchEverywhere)
 	nmap <leader>fs <Action>(FindInPath)
