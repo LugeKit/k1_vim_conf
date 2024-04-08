@@ -31,8 +31,6 @@ noremap <C-h> ^
 noremap <C-l> $
 noremap <C-j> 5j
 noremap <C-k> 5k
-noremap ; :
-noremap : ;
 nnoremap <silent> <leader>ta :tabo<CR>
 nnoremap <silent> <leader>// :rightbelow vsplit $MYVIMRC<CR>
 inoremap <C-h> <Left>
@@ -44,7 +42,6 @@ cnoremap <C-k> <Right>
 cnoremap <C-h> <S-Left>
 cnoremap <C-l> <S-Right>
 xnoremap y y`>
-onoremap , t,
 
 " ESC to switch off highlights
 nnoremap <silent> <ESC> :noh<CR>
@@ -54,7 +51,6 @@ nnoremap <leader>s :%s/
 xnoremap <leader>s :s/
 
 nnoremap <leader>W :call ToggleWindowMode()<CR>
-
 " }}}
 
 " Useful commands
@@ -118,13 +114,6 @@ augroup end
 " Jetbrains IDE settings {{{
 if exists("&ide")
 	set highlightedyank
-
-	set easymotion
-	let g:EasyMotion_do_mapping = 0
-	nmap f <Plug>(easymotion-bd-fl)
-	omap f <Plug>(easymotion-bd-fl)
-	vmap f <Plug>(easymotion-bd-fl)
-
 	nmap <leader>ff <Action>(SearchEverywhere)
 	nmap <leader>fs <Action>(FindInPath)
 	nmap <leader>fd <Action>(GotoDeclaration)
@@ -143,6 +132,7 @@ if exists("&ide")
 	nmap <C-]> <Action>(NextTab)
 	nmap <C-[> <Action>(PreviousTab)
 	imap <C-i> <Action>(ParameterInfo)
+	imap <C-w> <Action>(EditorBackSpace)
 
 	command! GT action RunClass
 	command! GB action Annotate
