@@ -1,5 +1,4 @@
 " Vim settings {{{
-:language en
 mapclear
 set hlsearch
 set incsearch
@@ -20,6 +19,7 @@ let mapleader = " "
 " }}}
 
 if !empty(glob("C:/Program Files/PowerShell/7/pwsh.exe"))
+	:language en
 	set shell =\"C:/Program\ Files/PowerShell/7/pwsh.exe\"
 endif
 
@@ -44,6 +44,7 @@ cnoremap <C-k> <Right>
 cnoremap <C-h> <S-Left>
 cnoremap <C-l> <S-Right>
 xnoremap y y`>
+onoremap , t,
 
 " ESC to switch off highlights
 nnoremap <silent> <ESC> :noh<CR>
