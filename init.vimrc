@@ -6,6 +6,7 @@ set nu
 set rnu
 set ignorecase
 set smartcase
+set clipboard=unnamed
 set updatetime=250
 set timeoutlen=1000
 set ttimeoutlen=100
@@ -18,10 +19,12 @@ syntax enable
 let mapleader = " "
 " }}}
 
+" Windows settings {{{
 if !empty(glob("C:/Program Files/PowerShell/7/pwsh.exe"))
 	:language en
 	set shell =\"C:/Program\ Files/PowerShell/7/pwsh.exe\"
 endif
+" }}}
 
 source ~/.vim/func.vim
 
@@ -114,6 +117,7 @@ augroup end
 " Jetbrains IDE settings {{{
 if exists("&ide")
 	set highlightedyank
+	set clipboard+=ideaput
 	nmap <leader>ff <Action>(SearchEverywhere)
 	nmap <leader>fs <Action>(FindInPath)
 	nmap <leader>fd <Action>(GotoDeclaration)
