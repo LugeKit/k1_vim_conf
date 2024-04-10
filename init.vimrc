@@ -132,7 +132,7 @@ if exists("&ide")
 	nmap <C-]> <Action>(NextTab)
 	nmap <C-[> <Action>(PreviousTab)
 	imap <C-i> <Action>(ParameterInfo)
-	imap <C-w> <Action>(EditorBackSpace)
+	imap <C-w> <Action>(EditorDeleteToWordStart)
 
 	command! GT action RunClass
 	command! GB action Annotate
