@@ -38,6 +38,8 @@ noremap <C-h> ^
 noremap <C-l> $
 noremap <C-j> 5j
 noremap <C-k> 5k
+nnoremap ; :
+nnoremap : ;
 nnoremap <silent> <leader>ta :tabo<CR>
 nnoremap <silent> <leader>// :rightbelow vsplit $MYVIMRC<CR>
 inoremap <C-h> <Left>
@@ -57,11 +59,9 @@ nnoremap <silent> <ESC> :noh<CR>
 nnoremap <leader>s :%s/
 xnoremap <leader>s :s/
 
+nnoremap <F1> :below terminal<CR>
 nnoremap <leader>W :call ToggleWindowMode()<CR>
 " }}}
-
-" Useful commands
-command! TE :below terminal
 
 " Register settings {{{
 nnoremap x "_x
