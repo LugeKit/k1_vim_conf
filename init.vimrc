@@ -12,6 +12,10 @@ set timeoutlen=1000
 set ttimeoutlen=100
 set scrolloff=10
 set backspace=indent,eol,start
+set expandtab
+set tabstop=4
+set shiftwidth=0
+set smarttab
 filetype on
 filetype plugin on
 filetype indent on
