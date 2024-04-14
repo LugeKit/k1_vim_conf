@@ -27,6 +27,7 @@ let mapleader = " "
 if !empty(glob("C:/Program Files/PowerShell/7/pwsh.exe"))
 	:language en
 	set shell =\"C:/Program\ Files/PowerShell/7/pwsh.exe\"
+    inoremap <C-Backspace> <C-w>
 endif
 " }}}
 
