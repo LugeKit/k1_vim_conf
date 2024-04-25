@@ -85,11 +85,15 @@ xnoremap s" <ESC>`>a"<ESC>`<i"<ESC>
 xnoremap s' <ESC>`>a'<ESC>`<i'<ESC>
 xnoremap s[ <ESC>`>a]<ESC>`<i[<ESC>
 xnoremap s< <ESC>`>a><ESC>`<i<<ESC>
+xnoremap s{ <ESC>`>a}<ESC>`<i{<ESC>
+
 nnoremap s( mpciw()<ESC>P`pl
 nnoremap s" mpciw""<ESC>P`pl
 nnoremap s' mpciw''<ESC>P`pl
 nnoremap s[ mpciw[]<ESC>P`pl
 nnoremap s< mpciw<><ESC>P`pl
+nnoremap s{ mpciw{}<ESC>P`pl
+
 nnoremap S( mpva(<ESC>`>x`<x`ph
 nnoremap S" mpva"<ESC>`>x`<x`ph
 nnoremap S' mpva'<ESC>`>x`<x`ph
