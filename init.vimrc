@@ -127,6 +127,8 @@ augroup end
 if exists("&ide")
 	set highlightedyank
 	set clipboard+=ideaput
+    nmap <C-o> <Action>(Back)
+    nmap <C-i> <Action>(Forward)
 	nmap <leader>ff <Action>(SearchEverywhere)
 	nmap <leader>fs <Action>(FindInPath)
 	nmap <leader>fd <Action>(GotoDeclaration)
