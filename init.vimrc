@@ -52,6 +52,8 @@ cnoremap <C-k> <Right>
 cnoremap <C-h> <S-Left>
 cnoremap <C-l> <S-Right>
 xnoremap y y`>
+xnoremap ; :
+xnoremap : ;
 
 " ESC to switch off highlights
 nnoremap <silent> <ESC> :noh<CR>
