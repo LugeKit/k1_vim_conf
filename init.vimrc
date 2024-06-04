@@ -153,6 +153,8 @@ if exists("&ide")
 
 	command! GT action RunClass
 	command! GB action Annotate
+    command! FORMAT action ReformatCode
+    command! FORMATF action ReformatFile
 endif
 " }}}
 
