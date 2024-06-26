@@ -148,6 +148,7 @@ if exists("&ide")
 	nmap <leader>ta <Action>(CloseAllEditorsButActive)
 	nmap <C-]> <Action>(NextTab)
 	nmap <C-[> <Action>(PreviousTab)
+    nmap <C-w>h <Action>(SplitHorizontally)
 	imap <C-i> <Action>(ParameterInfo)
 	imap <C-w> <Action>(EditorDeleteToWordStart)
 
