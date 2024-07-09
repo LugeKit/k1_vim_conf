@@ -163,7 +163,6 @@ if exists("&ide")
 	imap <C-w> <Action>(EditorDeleteToWordStart)
 
 	command! GT action RunClass
-	command! GB action Annotate
     command! FM action ReformatCode
     command! FMF action ReformatFile
 endif
