@@ -82,12 +82,21 @@ xnoremap <leader>D "_D
 " Parenthsis settings {{{
 " s to surround things
 " S to unsurround things
-xnoremap s( <ESC>`>a)<ESC>`<i(<ESC>
-xnoremap s" <ESC>`>a"<ESC>`<i"<ESC>
-xnoremap s' <ESC>`>a'<ESC>`<i'<ESC>
-xnoremap s[ <ESC>`>a]<ESC>`<i[<ESC>
-xnoremap s< <ESC>`>a><ESC>`<i<<ESC>
-xnoremap s{ <ESC>`>a}<ESC>`<i{<ESC>
+if exists("&ide")
+    xnoremap s( c()<ESC>hp
+    xnoremap s" c""<ESC>hp
+    xnoremap s' c''<ESC>hp
+    xnoremap s[ c[]<ESC>hp
+    xnoremap s< c<><ESC>hp
+    xnoremap s{ c{}<ESC>hp
+else
+    xnoremap s( <ESC>`>a)<ESC>`<i(<ESC>
+    xnoremap s" <ESC>`>a"<ESC>`<i"<ESC>
+    xnoremap s' <ESC>`>a'<ESC>`<i'<ESC>
+    xnoremap s[ <ESC>`>a]<ESC>`<i[<ESC>
+    xnoremap s< <ESC>`>a><ESC>`<i<<ESC>
+    xnoremap s{ <ESC>`>a}<ESC>`<i{<ESC>
+endif
 
 nnoremap s( mpciw()<ESC>P`pl
 nnoremap s" mpciw""<ESC>P`pl
@@ -106,7 +115,7 @@ nnoremap S{ mpva{<ESC>`>x`<x`ph
 if exists("&ide")
 	call OperatorForNextTargetInIDE(["c", "d"], ["(", "<", "[", '"', "'", "{"])
 else
-	" Currently this part in ide has bugs"
+	" Currently this part in ide has bugs
 	onoremap in( :<C-U>normal! f(vi(<CR>
 	onoremap in< :<C-U>normal! f<vi<<CR>
 	onoremap in[ :<C-U>normal! f[vi[<CR>
