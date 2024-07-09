@@ -131,6 +131,8 @@ if exists("&ide")
 	set clipboard+=ideaput
     nmap <C-o> <Action>(Back)
     nmap <C-i> <Action>(Forward)
+    nmap <C-w>H <Action>(MoveEditorToOppositeTabGroup)
+    nmap <C-w>L <Action>(MoveEditorToOppositeTabGroup)
 	nmap <leader>ff <Action>(SearchEverywhere)
 	nmap <leader>fs <Action>(FindInPath)
 	nmap <leader>fd <Action>(GotoDeclaration)
