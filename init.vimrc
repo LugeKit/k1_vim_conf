@@ -16,6 +16,7 @@ set expandtab
 set tabstop=4
 set shiftwidth=0
 set smarttab
+set shortmess-=S
 filetype on
 filetype plugin on
 filetype indent on
