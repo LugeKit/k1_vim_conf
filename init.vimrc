@@ -113,19 +113,12 @@ nnoremap S[ mpva[<ESC>`>x`<x`ph
 nnoremap S< mpva<<ESC>`>x`<x`ph
 nnoremap S{ mpva{<ESC>`>x`<x`ph
 
-if exists("&ide")
-	call OperatorForNextTargetInIDE(["c", "d"], ["(", "<", "[", '"', "'", "{"])
-else
-	" Currently this part in ide has bugs
-	onoremap in( :<C-U>normal! f(vi(<CR>
-	onoremap in< :<C-U>normal! f<vi<<CR>
-	onoremap in[ :<C-U>normal! f[vi[<CR>
-	onoremap in" :<C-U>normal! f"vi"<CR>
-	onoremap in' :<C-U>normal! f'vi'<CR>
-	onoremap in{ :<C-U>normal! f{vi{<CR>
-endif
-
-" }}}
+onoremap in( :<C-U>normal! f(vi(<CR>
+onoremap in< :<C-U>normal! f<vi<<CR>
+onoremap in[ :<C-U>normal! f[vi[<CR>
+onoremap in" :<C-U>normal! f"vi"<CR>
+onoremap in' :<C-U>normal! f'vi'<CR>
+onoremap in{ :<C-U>normal! f{vi{<CR>
 
 " Vimscript file settings {{{
 augroup filetype_vim
